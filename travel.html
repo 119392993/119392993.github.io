@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--title-->
+	<title> IS1113 Project</title>
+	<meta name="viewport" content="width=device-width"/>
+	<meta name="description" content="My CV."/>
+	
+	<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700%7CLato:400,300' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" type = "text/css" href="sports.css">
+</head>
+
+<body>
+	<!--Header for website-->
+	<div class="header">
+		<h1>Sports</h1>
+		
+		</div>
+    	<!--Navbar links-->
+			<div class="topnav">
+			<a href="index.html">Home</a>
+			<div class="dropdown">
+			<button class="dropbtn">Curriculum Vitae
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+    			<div class="dropdown-content">
+      			<a href="cvPersonal.html">Personal Profile</a>
+      			<a href="cvWork.html">Work Experience</a>
+      			<a href="cvEducation.html">Education</a>	
+     		</div>
+ 		</div>
+ 		<a href="interests.html"> My Interests</a>
+ 		<a href="consultancy.html">Consultancy</a>
+ 		<a href="ebus1.html">Calculator</a>
+	</div>
+<!--work experience paragraphs-->
+		<section>
+			<div class="sectionTitle">
+				<h1>Travelling</h1>
+			</div>
+			
+			<div class="sectionContent">
+				<article>
+					<h2>America</h2>
+					<p class="subDetails">
+					<p>I have been on holiday to America three times. I have been to New York twice and Florida once.</p>
+				</article>
+				
+				<article>
+					<h2>Austria</h2>
+					<p class="subDetails">
+					<p>I have been skiing in Austria five times. I used togo with my family in January when I was younger. I really enjoyed skiing.</p>
+				</article>
+				
+				<article>
+					<h2>France</h2>
+					<p class="subDetails">
+					<p>When I was younger I used to go to Disneyland Paris with my family. I really enjoyed the whole experience.</p>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<!-- Image scroll -->
+		<div class="jquery-script-clear"></div>
+<div id="jqcontainer"> <span class="title">Sports Pictures</span>
+  <ul id="imgs">
+    <li><img src="travelimages/travel1.jpg" alt="Plane in sky" /></li>
+    <li><img src="travelimages/travel2.jpg" alt="Empire State Building" /></li>
+    <li><img src="travelimages/travel3.jpg" alt="Statue of Liberty" /></li>
+    <li><img src="travelimages/travel4.jpg" alt="Eiffel tower" /></li>
+    <li><img src="travelimages/travel5.jpg" alt="Paris at night" /></li>
+    <li><img src="travelimages/travel6.jpg" alt="Austria" /></li>
+    <li><img src="travelimages/travel7.jpg" alt="Skiing" /></li>
+  </ul>
+  <span class="title"></span> </div>
+<div id="controler"> </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="ImageScroll.js"></script> 
+<script type="text/javascript">
+
+  $('#imgs').imageScroll({
+    orientation:"left",
+    speed:600,
+    interval:1000,
+    hoverPause:true,
+    callback:function(){
+      var ordinal = $(this).find("img").first().attr("src");
+      <!-- console.log(ordinal); -->
+      $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+    }
+  });
+
+  </script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
